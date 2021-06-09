@@ -94,5 +94,31 @@ for (const key in coleccionPalabras) {
 /*for (const iterator of coleccionPalabras) {
     console.log(iterator);
 }*/
+/* let opcion = Number(prompt("introduce la opcion que quieres realizar"));
+if (!isNaN(opcion)) {
+  switch (opcion) {
+    case 1:
+      console.log("Valor 1");
+      break;
+    case 2:
+      console.log("Valor 2");
+      break;
+    case 3:
+      console.log("Valor 3");
+      break;
 
+    default:
+      console.log("Valor sin definir");
+      break;
+  }
+} else {
+  console.log(opcion);
+} */
+
+let confirmacion = confirm('Estas seguro que quieres continuar')
+if (confirmacion){
+  alert('terminis aceptados')
+} else {
+  alert('proceso cancelado')
+}
 
