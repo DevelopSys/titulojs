@@ -89,7 +89,7 @@ let numeroFinal = Number(prompt('dime numero finall'))
 for (let index = numeroInicial; index <= array.numeroFinal; index++) {
     console.log(index); 
 }
-*/
+
 
 let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -113,4 +113,21 @@ numeros.forEach((element) => {
   console.log(element);
 });
 
-console.log(media/numeros.length)
+console.log(media/numeros.length) */
+
+let frase = prompt("introduce una frase que quieras analizar");
+
+if (frase.length < 10) {
+  frase = prompt("introduce una frase que quieras analizar");
+} else {
+  let patron = frase.replace(".", " ").replace(",", " ");
+  let palabras = patron.split(" ");
+  let contador = 0;
+  let letras = palabras.forEach((item) => {
+    contador += item.length;
+  });
+  let frases = frase.split(".").length;
+  console.log(palabras.length);
+  console.log(contador);
+  console.log(frases);
+}
