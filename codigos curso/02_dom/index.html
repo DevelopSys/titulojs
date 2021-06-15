@@ -22,10 +22,98 @@
     <div class="container">
       <div class="row">
         <div class="col-4">
-          <img src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" />
+          <img
+            class="img-fluid"
+            src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
+          />
         </div>
         <div class="col">
           <h1>Perfil</h1>
+          <div>
+            <div class="mb-3">
+              <label for="exampleInputNombre1" class="form-label">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputNombre1"
+                aria-describedby="nombreHelp"
+                
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputApellido1" class="form-label"
+                >Apellido</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="exampleInputApellido1"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEdad1" class="form-label">Edad</label>
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputEdad1"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputProfesion" class="form-label"
+                >Profesion</label
+              >
+              <select class="form-control" id="exampleInputProfesion">
+                <option value="ingeniero">Ingeniero</option>
+                <option value="medico">Medico</option>
+                <option value="arquitecto">Arqutecto</option>
+                <option value="oficial">Oficial</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="sexo_grupo"
+                  id="radioMasculino"
+                />
+                <label class="form-check-label" for="radioMasculino">
+                  Masculino
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="sexo_grupo"
+                  id="radioFemenino"
+                />
+                <label class="form-check-label" for="radioFemenino">
+                  Femenino
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleExperiencia1"
+              />
+              <label class="form-check-label" for="exampleExperiencia1"
+                >Experiencia</label
+              >
+            </div>
+            <button
+              class="btn btn-primary"
+            >
+              Guardar
+            </button>
+          </div>
         </div>
       </div>
     </div>
