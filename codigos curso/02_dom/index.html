@@ -19,13 +19,22 @@
     <title>Document</title>
   </head>
   <body>
+    
     <div class="container">
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-4">
           <img
             class="img-fluid"
             src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg"
           />
+          
+          <h1 id="nombrePerfil"> </h1>
+          <h2 id="apellidoPerfil"> </h2>
+          <h3 id="edadPerfil"></h3>
+          <h3 id="profesionPerfil"></h3>
+          <h3 id="sexoPerfil"></h3>
+          
+          
         </div>
         <div class="col">
           <h1>Perfil</h1>
@@ -37,6 +46,7 @@
                 class="form-control"
                 id="exampleInputNombre1"
                 aria-describedby="nombreHelp"
+                
                 
               />
             </div>
@@ -65,10 +75,11 @@
                 >Profesion</label
               >
               <select class="form-control" id="exampleInputProfesion">
-                <option value="ingeniero">Ingeniero</option>
+                <option value="ingeniero_a">Ingeniero primer nivel</option>
+                <option value="ingeniero_b">Ingeniero segundo nivel</option>
                 <option value="medico">Medico</option>
-                <option value="arquitecto">Arqutecto</option>
-                <option value="oficial">Oficial</option>
+                <option value="arquitecto">Arquitecto</option>
+                <option value="oficial" selected>Oficial</option>
               </select>
             </div>
 
@@ -79,6 +90,7 @@
                   type="radio"
                   name="sexo_grupo"
                   id="radioMasculino"
+                  value="masculino"
                 />
                 <label class="form-check-label" for="radioMasculino">
                   Masculino
@@ -91,6 +103,7 @@
                   type="radio"
                   name="sexo_grupo"
                   id="radioFemenino"
+                  value="femenino"
                 />
                 <label class="form-check-label" for="radioFemenino">
                   Femenino
@@ -110,13 +123,27 @@
             </div>
             <button
               class="btn btn-primary"
+              id='botonMostrar'
+              >
+              Mostrar
+            </button>
+            <button
+              class="btn btn-primary"
+              id='botonGuardar'
             >
               Guardar
             </button>
           </div>
         </div>
       </div>
+      
+      <div class="row mt-4" id="contenidoUsuarios">
+        <h2>Usuarios</h2>
+      </div>
+      
+      </div>
     </div>
     <script src="./js/01_inicio_dom.js"></script>
   </body>
 </html>
+
