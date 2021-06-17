@@ -1,3 +1,11 @@
 h2.mt-4 {
     text-align: center;
 }
+
+.con-experiencia{
+    color: aquamarine;
+}
+
+.sin-experiencia{
+    color: red;
+}

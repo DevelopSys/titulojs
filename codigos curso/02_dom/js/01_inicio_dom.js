@@ -30,7 +30,7 @@ buttonForm.addEventListener("click", (evento) => {
       profesionSelect.options[profesionSelect.selectedIndex].value;
     document.querySelector("#sexoPerfil").textContent = sexo;
   } else {
-    alert('Faltan datos')
+    alert("Faltan datos");
   }
   /*
   let apellido = document.querySelector("#exampleInputApellido1");
@@ -54,16 +54,76 @@ buttonForm.addEventListener("click", (evento) => {
   console.log(grupo.value); */
 });
 
-buttonGuardar.addEventListener('click',()=>{
+let id = 1;
+
+buttonGuardar.addEventListener("click", () => {
   //console.log('pulsado guardar');
   let nombre = document.querySelector("#exampleInputNombre1").value;
-  let contenidoUsuarios = document.querySelector('#contenidoUsuarios');
-  contenidoUsuarios.innerHTML = `${contenidoUsuarios.innerHTML} <h3>${nombre}</h3>`
+  let apellido = document.querySelector("#exampleInputApellido1").value;
+  let edad = document.querySelector("#exampleInputEdad1").value;
+  let experiencia = document.querySelector("#exampleExperiencia1").checked;
+  let cuerpo = document.querySelector("tbody");
+  let fila = document.createElement("tr");
+
+  fila.innerHTML = `<th scope="row">${id}</th>
+<td>${nombre}</td>
+<td>${apellido}</td>
+<td>${edad}</td>`;
+
+  experiencia
+    ? fila.classList.add("table-success")
+    : fila.classList.add("table-danger");
+
+  cuerpo.appendChild(fila);
+
+  /*let colId = document.createElement("th");
+  colId.scope = "row";
+  colId.textContent = id;
+  let colNombre = document.createElement("td");
+  colNombre.textContent = nombre;
+  let colApellido = document.createElement("td");
+  colApellido.textContent = apellido;
+  let colEdad = document.createElement("td");
+  colEdad.textContent = edad;
+
+  fila.appendChild(colId);
+  fila.appendChild(colNombre);
+  fila.appendChild(colApellido);
+  fila.appendChild(colEdad);
+  cuerpo.appendChild(fila);*/
+
+  /*let nodo = document.createElement("li");
+  nodo.textContent = `${nombre} ${apellido} ${edad}`;
+  nodo.value = id;
+  nodo.className = 'list-group-item'
+  if (experiencia) {
+    //nodo.classList.add("con-experiencia");
+    nodo.className = "con-experiencia"
+  } else {
+    nodo.classList.add("sin-experiencia");
+  }
+  lista.appendChild(nodo);*/
+
+  id++;
+
+  /*let contenidoUsuarios = document.querySelector('#contenidoUsuarios');
+  let nodoInsertar = document.createElement('h3')
+  nodoInsertar.textContent = nombre
+  nodoInsertar.id = "usuario"
+  contenidoUsuarios.appendChild(nodoInsertar)*/
+  //contenidoUsuarios.innerHTML = `${contenidoUsuarios.innerHTML} <h3 id='usuario'>${nombre}</h3>`
+  //let nodoUser = document.querySelector('#usuario').textContent = "otra cosa"
   //console.log(contenidoUsuarios);
-  
-})
+});
 
-
+document.querySelector("#botonBorrar").addEventListener("click", () => {
+  let nodos = document.querySelectorAll("table tbody tr.table-danger");
+  nodos.forEach((element) => {
+    document.querySelector("tbody").removeChild(element);
+  });
+  //console.log(tabla);
+  //document.removeChild(tabla)
+});
 
 let palabra = "";
 /*function inputTeclaPulsada(nombre) {
